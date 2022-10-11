@@ -1,9 +1,8 @@
 package com.laraknife.basketballscore
 
+import com.laraknife.basketballscore.databinding.ActivityScoreBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.laraknife.basketballscore.databinding.ActivityScoreBinding
 
 class ScoreActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,6 +11,18 @@ class ScoreActivity : AppCompatActivity() {
         setContentView(binding.root)
         // Recuperación de los datos //
         val local = intent.getStringExtra("local")
-        val visitante = intent.getStringExtra("visitante")
+        val visita = intent.getStringExtra("visitante")
+
+        // Se define el marcador //
+        binding.txtMarcador.text="$local - $visita"
+
+        // Se define el mensaje a mostrar del ganador //
+        if (local == visita){
+            binding.txtResultMessage.text="Fue un empate"
+        }else if (local!! < visita!!){
+            binding.txtResultMessage.text="¡Ganaron los visitantes!"
+        }else{
+            binding.txtResultMessage.text="¡Ganó el equipo local!"
+        }
     }
 }
