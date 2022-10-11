@@ -2,8 +2,9 @@ package com.laraknife.basketballscore
 
 import com.laraknife.basketballscore.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.content.Intent
 import android.widget.Toast
+import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,25 +71,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Resultados //
+        binding.resultButton.setOnClickListener {
+            // Definiendo los parametros a enviar //
+            val local = binding.txtCountLocal.text.toString()
+            val visitante = binding.txtCountVisitante.text.toString()
 
-    }
-}
-
-
-/* override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.calcular.setOnClickListener {
-            val edadString = binding.edad.text.toString()
-            if (edadString.isEmpty()){
-                Toast.makeText(this,"Ingrese una edad",Toast.LENGTH_LONG).show()
-            }else{
-                val age = edadString.toInt()
-                val edaddog = age * 7
-                binding.resultado.text = "Su edad es años perro sería $edaddog"
-            }
+            // Llamado a la segunda activity pasando parametros //
+            startActivity(Intent(applicationContext,ScoreActivity::class.java).apply {
+                putExtra("local", local); putExtra("visitante", visitante) })
         }
     }
- */
+}

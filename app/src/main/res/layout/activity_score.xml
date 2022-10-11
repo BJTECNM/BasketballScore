@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ScoreActivity">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtCabeceraResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cabeceraresultado"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold|italic"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtMarcador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 - 0"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="normal|bold"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtResultMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fue un empate"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/imgResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/resultado"
+                app:srcCompat="@drawable/empate" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

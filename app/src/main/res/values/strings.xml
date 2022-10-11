@@ -7,4 +7,6 @@
     <string name="menosuno">-1</string>
     <string name="masdos">+2</string>
     <string name="countinicial">0</string>
+    <string name="cabeceraresultado">LOCAL - VISITANTE</string>
+    <string name="resultado">resultado</string>
 </resources>
