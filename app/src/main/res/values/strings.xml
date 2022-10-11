@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BasketballScore</string>
+    <string name="local">LOCAL</string>
+    <string name="balon">Balón</string>
+    <string name="visitante">VISITANTE</string>
+    <string name="masuno">+1</string>
+    <string name="menosuno">-1</string>
+    <string name="masdos">+2</string>
+    <string name="countinicial">0</string>
 </resources>
