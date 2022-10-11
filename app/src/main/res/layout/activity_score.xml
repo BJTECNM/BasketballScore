@@ -57,6 +57,17 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/resultado"
                 app:srcCompat="@drawable/empate" />
+
+            <TextView
+                android:id="@+id/txtDev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:hint="Hecho por LaraKnife"
+                android:visibility="visible" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

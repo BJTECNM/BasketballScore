@@ -20,10 +20,13 @@ class ScoreActivity : AppCompatActivity() {
         // Se define el mensaje a mostrar del ganador //
         if (local == visita){
             binding.txtResultMessage.text="Fue un empate"
+            binding.imgResultado.setImageResource(R.drawable.empate)
         }else if (local!! < visita!!){
             binding.txtResultMessage.text="¡Ganaron los visitantes!"
+            binding.imgResultado.setImageResource(R.drawable.ganadorvisitante)
         }else{
             binding.txtResultMessage.text="¡Ganó el equipo local!"
+            binding.imgResultado.setImageResource(R.drawable.ganadorlocal)
         }
     }
 }
