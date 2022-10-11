@@ -103,8 +103,7 @@
             app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toEndOf="@+id/resetButton"
             app:layout_constraintTop_toBottomOf="@+id/txtCountLocal"
-            tools:srcCompat="@drawable/balon"
-            tools:visibility="visible" />
+            app:srcCompat="@drawable/balon" />
 
         <Button
             android:id="@+id/resultButton"
