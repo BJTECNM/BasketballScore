@@ -9,6 +9,7 @@ class ScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityScoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         // Recuperación de los datos //
         val local = intent.getStringExtra("local")
         val visita = intent.getStringExtra("visitante")
