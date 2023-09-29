@@ -7,185 +7,176 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/resetButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:padding="16dp"
+                android:src="@android:drawable/ic_menu_delete" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:importantForAccessibility="no"
+                app:srcCompat="@drawable/balon" />
+
+            <ImageView
+                android:id="@+id/resultButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:padding="16dp"
+                android:src="@android:drawable/ic_menu_slideshow"/>
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/txtLocal"
-            android:layout_width="0dp"
+            android:id="@+id/local_text"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:text="@string/local"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/lessLocButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="56dp"
-            android:text="@string/menosuno"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLocal"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold|italic" />
 
         <TextView
-            android:id="@+id/txtCountLocal"
-            android:layout_width="wrap_content"
+            android:id="@+id/visitor_text"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:text="0"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toStartOf="@+id/more2LocButton"
-            app:layout_constraintStart_toEndOf="@+id/lessLocButton"
-            app:layout_constraintTop_toBottomOf="@+id/txtLocal" />
-
-        <Button
-            android:id="@+id/moreLocButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/masuno"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLocal"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <Button
-            android:id="@+id/more2LocButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/masdos"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/moreLocButton"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <Button
-            android:id="@+id/resetButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="80dp"
-            android:textAlignment="center"
-            app:icon="@android:drawable/ic_menu_delete"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lessLocButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageView
-            android:id="@+id/imgBalon"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="32dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/balon"
-            android:scaleType="centerInside"
-            app:layout_constraintEnd_toStartOf="@+id/resultButton"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toEndOf="@+id/resetButton"
-            app:layout_constraintTop_toBottomOf="@+id/txtCountLocal"
-            app:srcCompat="@drawable/balon" />
-
-        <Button
-            android:id="@+id/resultButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="16dp"
-            android:textAlignment="center"
-            app:icon="@android:drawable/ic_menu_slideshow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/more2LocButton"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/more2VisButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/masdos"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/moreVisButton"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <TextView
-            android:id="@+id/txtVisitante"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:text="@string/visitante"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCountVisitante" />
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold|italic" />
 
-        <TextView
-            android:id="@+id/txtCountVisitante"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="0"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toStartOf="@+id/more2VisButton"
-            app:layout_constraintStart_toEndOf="@+id/lessVisButton"
-            app:layout_constraintTop_toBottomOf="@+id/imgBalon" />
-
-        <Button
-            android:id="@+id/moreVisButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/masuno"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resultButton"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <Button
-            android:id="@+id/lessVisButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_above="@+id/center_layout"
+            android:layout_below="@+id/local_text"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="80dp"
-            android:text="@string/menosuno"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resetButton"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/lessLocButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menosuno"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtCountLocal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="72sp"
+                tools:text="62" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/moreLocButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/masuno"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/more2LocButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/masdos"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/visitor_text"
+            android:layout_below="@+id/center_layout"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/lessVisButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menosuno"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtCountVisitante"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="72sp"
+                tools:text="52" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/moreVisButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/masuno"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/more2VisButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/masdos"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </layout>
